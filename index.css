@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(89, 89, 95);
+}
+
+.container{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 50px;
+    height:92vh;
+    width:95%;
+    background:linear-gradient(rgb(75, 74, 74),rgb(98, 98, 96));
+ 
+}
+.container:before,
+.container:after 
+{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    background:linear-gradient(90deg,#ff0000,#00ffff,#00FF00,#0000ff,#ffff00,#f0ff,#ff0000,#00ffff,#00FF00,#0000ff,#ffff00,#f0ff);
+    background-size: 500%;
+    z-index: -1;
+    animation:ani 23s linear  infinite;
+    
+}
+.container::after{
+    filter: blur(10px);
+}
+
+@keyframes ani{
+    from{
+        background-position:  0 0;
+    }
+    to{
+        background-position: 400% 0;
+    }
+}
+.list{
+    position: absolute;
+    top: 20%;
+    right:calc(30% + 130px);
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    
+}
+#img1{
+    top: 20px;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    transition: border 0.5s;
+
+}
+#img1:hover{
+    border: solid red 10px;
+}
+.btn{
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    height: 30px;
+    width: 70px;
+    /* background:linear-gradient(rgb(203, 88, 88),rgb(97, 97, 172)); */
+    background-color: #c712a0;
+    font-size: 30px;
+    transition: background-color 0.5s ,border 0.5s;
+    cursor: pointer;
+    color: #eee;
+}
+.btn:hover{
+    border:  solid rgb(39, 162, 72) 2px;
+    background-color: #f00044;
+}
+.container-text{
+    position: absolute;
+    top: 20%;
+    left: 40px;
+   
+    /* background-color: #f00044; */
+    
+}
+@keyframes cm {
+    from{
+         opacity: 0;
+    }
+    to{
+          opacity: 1;
+    }
+}
+
+.container-text p{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: aliceblue;
+  opacity: 1;
+}
+.container-text h1{
+    font-size: 70px;
+    animation: cm 9s 2 linear;
+}
+.main-option{
+    left: 66%;
+    top: 20%;
+    position: relative;
+    height: 550px;
+    width: 550px;
+    transform: rotate();
+    /* background-color: aqua; */
+    animation: maindiv 23s infinite linear;
+}
+@keyframes maindiv{
+    form{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+span{
+    color: #c712a0;
+}
+#cl{
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+
+    /* background-color: #00FF00; */
+    /* border: solid rgb(0, 255, 72) 5px; */
+}
+#cl {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    color: aliceblue;
+}
+.main-option div{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    /* background-color: #f00e0e; */
+    /* border: solid rgb(0, 255, 72) 5px; */
+}
+/* #nab1{
+    border: solid rgb(0, 150, 136) 5px;
+} */
+.main-option  .home{
+    position: absolute;
+    left: 35%;
+    border: solid rgb(234, 227, 31) 5px;
+   /* background-color: #FFC107; */
+}
+.main-option  .about{
+    position: absolute;
+    top: 25%; 
+    border: solid rgb(0, 150, 136) 5px;
+}
+.main-option  .services{
+    position: absolute;
+    top: 36%;
+    right: 0;
+    border: solid rgb(0, 150, 136) 5px;
+}
+
+.main-option  .contact{
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    border: solid rgb(234, 227, 31) 5px;
+}
+.main-option div a{
+    text-decoration: none;
+}
+@media only screen and (max-width:600px){
+    body{
+        background-color: black;
+    }
+    .container{
+        margin-left: 15px;
+        width: 350px;
+        
+    }
+    .list,#img1{
+        top: 24%;
+        left: 10%;
+        height: 250px;
+        width: 250px;
+    }
+    .btn{
+       top: 20px;
+       right: 20px;
+    }
+    .container-text{
+        top: 10px;
+    }
+    .container-text p{
+        font-size: 20px;
+    }
+    .container-text h1{
+        font-size: 20px;
+    }
+    .main-option{
+        left: 40px;
+        top: 55%;
+        height: 300px;
+        width: 300px;
+    }
+    .main-option div{
+        height: 100px;
+        width: 100px;
+    }
+    a{
+        font-size:10px;
+    }
+}
